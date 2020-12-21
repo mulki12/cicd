@@ -17,4 +17,9 @@ class AppVersion extends Model
         "code_version",
         "app_version",
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 }

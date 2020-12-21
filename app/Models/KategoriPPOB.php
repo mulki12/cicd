@@ -14,4 +14,9 @@ class KategoriPPOB extends Model
     protected $fillable = [
         'kode_ppob', 'nama_ppob', 'action', 'icon_ppob', 'is_published', 'set_priority'
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 }

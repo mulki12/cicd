@@ -14,4 +14,9 @@ class Info extends Model
     protected $fillable = [
         'image_info', 'keterangan', 'expired_date', 'is_active', 'set_priority'
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 }

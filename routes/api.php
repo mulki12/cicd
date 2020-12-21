@@ -4,6 +4,7 @@ use App\Http\Controllers\AppVersionController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\InformationAppsController;
 use App\Http\Controllers\KategoriJasaController;
 use App\Http\Controllers\KategoriPPOBController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'v1'], function () {
 
     Route::get('home', [HomeController::class, 'home'])->name('home.get');
+    Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard.get');
 
     Route::get('version', [AppVersionController::class, 'show'])->name('version.get');
     Route::post('version', [AppVersionController::class, 'store'])->name('version.add');
@@ -51,5 +53,11 @@ Route::group(['prefix' => 'v1'], function () {
     Route::post('info', [InfoController::class, 'store'])->name('info.add');
     Route::put('info/{id}', [InfoController::class, 'update'])->name('info.edit');
     Route::DELETE('info/{id}', [InfoController::class, 'destroy'])->name('info.delete');
+
+    Route::get('information_apps', [InformationAppsController::class, 'show'])->name('info_app.get');
+    Route::post('information_apps', [InformationAppsController::class, 'store'])->name('info_app.add');
+    Route::put('information_apps/{id}', [InformationAppsController::class, 'update'])->name('info_app.edit');
+    Route::DELETE('information_apps/{id}', [InformationAppsController::class, 'destroy'])->name('info_app.delete');
+
 
 });

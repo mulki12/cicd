@@ -14,4 +14,9 @@ class KategoriJasa extends Model
     protected $fillable = [
         'kode_jasa', 'nama_jasa', 'action', 'icon_jasa', 'is_published', 'set_priority'
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 }

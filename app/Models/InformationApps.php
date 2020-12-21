@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class InformationApps extends Model
 {
     use HasFactory;
 
-    protected $table = 'banner';
+    protected $table = 'information_apps';
 
     protected $fillable = [
-        'scope', 'image_url', 'is_active', 'set_priority'
+        'platform', 'scope', 'section_information', 'content_information'
     ];
 
     protected $casts = [
