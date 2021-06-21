@@ -24,6 +24,10 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+Route::get('/', function () {
+    return 'connected';
+});
+
 Route::group(['prefix' => 'v1'], function () {
 
     Route::get('home', [HomeController::class, 'home'])->name('home.get');
@@ -58,6 +62,5 @@ Route::group(['prefix' => 'v1'], function () {
     Route::post('information_apps', [InformationAppsController::class, 'store'])->name('info_app.add');
     Route::put('information_apps/{id}', [InformationAppsController::class, 'update'])->name('info_app.edit');
     Route::DELETE('information_apps/{id}', [InformationAppsController::class, 'destroy'])->name('info_app.delete');
-
 
 });
