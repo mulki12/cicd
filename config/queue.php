@@ -70,7 +70,7 @@ return [
         'rabbitmq' => [
 
             'driver' => 'rabbitmq',
-            'queue' => env('RABBITMQ_QUEUE', 'default'),
+            'queue' => env('RABBITMQ_QUEUE', 'generals'),
             'connection' => PhpAmqpLib\Connection\AMQPLazyConnection::class,
 
             'hosts' => [
@@ -79,7 +79,8 @@ return [
                     'port' => env('RABBITMQ_PORT', 5672),
                     'user' => env('RABBITMQ_USER', 'guest'),
                     'password' => env('RABBITMQ_PASSWORD', 'guest'),
-                    'vhost' => env('RABBITMQ_VHOST', '/'),
+                    'vhost' => env('RABBITMQ_VHOST', 'guest'),
+	            'queue' => env('RABBITMQ_QUEUE', 'generals'),
                 ],
             ],
 
@@ -90,11 +91,16 @@ return [
                     'local_key' => env('RABBITMQ_SSL_LOCALKEY', null),
                     'verify_peer' => env('RABBITMQ_SSL_VERIFY_PEER', true),
                     'passphrase' => env('RABBITMQ_SSL_PASSPHRASE', null),
-                ],
                 'queue' => [
+                    'exchange' => 'generals_exchange',
+                    'exchange_type' => 'topic',
+                    'exchange_routing_key' => 'generals_rk',
+                    'prioritize_delayed' =>  false,
+                    'queue_max_priority' => 10,
                     'job' => VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
                 ],
             ],
+        ],
 
             /*
              * Set to "horizon" if you wish to use Laravel Horizon.
