@@ -1,0 +1,35 @@
+os:
+  - linux
+# bahasa
+language: php
+# distro 
+dist: trusty
+
+php:
+  - '7.4'
+# service yang digunakan
+services:
+  - docker
+# grouping  task
+jobs:
+  include:
+  # melakukan testing 
+    - stage: "Tests"                
+      name: "Unit Test PHP"  
+      script: 
+      - travis_retry composer self-update
+      - travis_retry composer install --prefer-source --no-interaction
+      - travis_retry composer update --prefer-source --no-interaction
+      - cp .env.example .env
+      - php artisan key:generate
+      - =php artisan migrate:fresh
+      - vendor/bin/phpunit tests/Feature/ExampleTest.php
+    # melakukan build images dan publish ke docker hub
+    - stage: "Build Docker Image"
+      name: "Build Images Docker" 
+      script:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - docker build -t anjasmara_service_general .
+      - docker images
+      - docker tag anjasmara_service_general $DOCKER_USERNAME/cicd-generals
+      - docker push $DOCKER_USERNAME/cicd-generals
