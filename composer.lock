@@ -1018,6 +1018,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v8.70.2",
             "source": {
                 "type": "git",
@@ -1028,6 +1029,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/dec9524cd0f9fa35a6eb8e25d0b40f8bbc8ec225",
                 "reference": "dec9524cd0f9fa35a6eb8e25d0b40f8bbc8ec225",
+=======
+            "version": "v8.69.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "545181da688db64fed6d8427e55f630a90ca0d32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/545181da688db64fed6d8427e55f630a90ca0d32",
+                "reference": "545181da688db64fed6d8427e55f630a90ca0d32",
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1199,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2021-11-09T22:48:33+00:00"
+=======
+            "time": "2021-11-02T13:53:22+00:00"
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
         },
         {
             "name": "laravel/serializable-closure",
@@ -5601,6 +5618,7 @@
         },
         {
             "name": "vlucas/phpdotenv",
+<<<<<<< HEAD
             "version": "v5.4.0",
             "source": {
                 "type": "git",
@@ -5611,6 +5629,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/d4394d044ed69a8f244f3445bcedf8a0d7fe2403",
                 "reference": "d4394d044ed69a8f244f3445bcedf8a0d7fe2403",
+=======
+            "version": "v5.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "accaddf133651d4b5cf81a119f25296736ffc850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/accaddf133651d4b5cf81a119f25296736ffc850",
+                "reference": "accaddf133651d4b5cf81a119f25296736ffc850",
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
                 "shasum": ""
             },
             "require": {
@@ -5633,7 +5663,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "5.4-dev"
+=======
+                    "dev-master": "5.3-dev"
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
                 }
             },
             "autoload": {
@@ -5663,7 +5697,11 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/vlucas/phpdotenv/tree/v5.4.0"
+=======
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.3.1"
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
             },
             "funding": [
                 {
@@ -5675,7 +5713,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2021-11-10T01:08:39+00:00"
+=======
+            "time": "2021-10-02T19:24:42+00:00"
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
         },
         {
             "name": "voku/portable-ascii",
@@ -7026,6 +7068,7 @@
             "support": {
                 "issues": "https://github.com/phar-io/version/issues",
                 "source": "https://github.com/phar-io/version/tree/3.1.0"
+<<<<<<< HEAD
             },
             "time": "2021-02-23T14:00:09+00:00"
         },
@@ -7082,6 +7125,64 @@
                 "issues": "https://github.com/PHP-CS-Fixer/diff/issues",
                 "source": "https://github.com/PHP-CS-Fixer/diff/tree/v1.3.1"
             },
+=======
+            },
+            "time": "2021-02-23T14:00:09+00:00"
+        },
+        {
+            "name": "php-cs-fixer/diff",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-CS-Fixer/diff.git",
+                "reference": "dbd31aeb251639ac0b9e7e29405c1441907f5759"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/diff/zipball/dbd31aeb251639ac0b9e7e29405c1441907f5759",
+                "reference": "dbd31aeb251639ac0b9e7e29405c1441907f5759",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3 || ^7.0",
+                "symfony/process": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "SpacePossum"
+                }
+            ],
+            "description": "sebastian/diff v2 backport support for PHP5.6",
+            "homepage": "https://github.com/PHP-CS-Fixer",
+            "keywords": [
+                "diff"
+            ],
+            "support": {
+                "issues": "https://github.com/PHP-CS-Fixer/diff/issues",
+                "source": "https://github.com/PHP-CS-Fixer/diff/tree/v1.3.1"
+            },
+>>>>>>> d4446b3f75d71b9ec3093cec0353131a156711f4
             "time": "2020-10-14T08:39:05+00:00"
         },
         {
